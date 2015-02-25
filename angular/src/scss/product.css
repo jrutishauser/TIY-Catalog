@@ -6,17 +6,52 @@
     padding: 2em;
     border: solid cornflowerblue 4px;
 }
-/******
-    Changing the position to relative on all product divs for the top right button
-    We can totally take this out if it breaks too much stuff
-*******/
 
-.product-detail {
-    position: relative;
-    border-radius: 0;
+.flip-container {
+    perspective: 300;
+}
+/* flip the pic when hovered */
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
 }
 
-.pic-flip {}
+.flip-container,
+.front,
+.back {
+    width: 320px;
+    height: 480px;
+}
+/* flip speed goes here */
+
+.flipper {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* front pane, placed above back */
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    
+    transform: rotateY(0deg);
+}
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+}
 
 .button-nav > .btn-group {}
 
