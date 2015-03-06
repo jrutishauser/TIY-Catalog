@@ -22,12 +22,19 @@
     <link rel='stylesheet' href='css/product.css' />
 </head>
 <body ng-app='tiy-catalog'>
-	<div id='container'>			
-		<section class='product-wrap' ng-controller='ProductController as product'>
+	<div id='container' ng-controller='ProductController as product'>
+	<section class='totalprodwrapper' ng-repeat='prod in product.prodArray'>	
+		<section class='product-wrap'>
 			<section class ='topcontent'>
-				<div class='variationone'>
+				<div class='variationone' ng-show='product.variationuno'>
+					<ul>
+						<li>{{'variation'}}</li>
+					</ul>	
 				</div><!--variationone-->
-				<div class='variationtwo'>	
+				<div class='variationtwo' ng-show='product.variationdos'>	
+					<ul>
+						<li>{{'variation'}}</li>
+					</ul>	
 				</div><!--variationtwo-->
 				<div class='morepictures' ng-click='product.morepics()'>M</div>	
 					<div class='imageholder'>	
@@ -39,17 +46,19 @@
 				<nav class='productbuttons'>	
 					<ul>
 						<li>M</li>
-						<li ng-mouseover='product.moused()'>M</li>
-						<li>M</li>
+						<li ng-mouseenter='product.moused()' 
+							ng-mouseleave='product.unmoused()'>M</li>
+						<li ng-mouseenter='product.moused2()'
+							ng-mouseleave='product.unmoused2()'>M</li>
 						<li>M</li>
 					</ul>
 				</nav><!--productbuttons-->
-				<div class='title'><span>{{'Lochness Monster'}}</span></div>
-				<div class='price'><span>{{'3.50' | currency}}</span></div>
 			</div><!--productinfo-->	
 		</section><!--product-wrap-->	
+		<div class='prodtitle'><span>{{'Lochness Monster'}}</span></div>
+		<div class='prodprice'><span>{{'3.50' | currency}}</span></div>
+	</section><!--totalprodwrapper-->
 	</div><!--container -->		
-	<!--product container called product-wrapper -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/angular/angular.js"></script>

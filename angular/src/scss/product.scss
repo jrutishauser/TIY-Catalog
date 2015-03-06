@@ -1,13 +1,18 @@
 $main: cornflowerblue;
 
 #container {
-	width: 90%;
+	width: 92%;
 	margin: 0 auto;
 }
+.totalprodwrapper {
+	width: 29%;
+	display: inline-block;
+}
 .product-wrap {
-	width: 33%;
+	width: 100%;
 	position: relative;	
-	border: 3px solid blue;	
+	display: inline-block;
+	border: 3px solid blue;
 		.imageholder{		
 			img {
 				width: 70%;
@@ -18,11 +23,33 @@ $main: cornflowerblue;
 		position: relative;	
 		.variationone {
 			height: 200px;
-			width: 100px;
+			width: 25%;
 			position: absolute;
-			bottom: 0;
-			left: 25%;
-			background-color: red;
+			bottom: -3px;
+			left: 24%;
+			background-color: white;
+			border: 3px solid blue;
+			ul {
+				margin: 0;
+				padding: 0;
+			}	
+		li {
+			list-syle-type: none;
+		}	
+		}
+		.variationtwo {
+			height: 200px;
+			width: 25%;
+			position: absolute;
+			bottom: -3px;
+			left: 49%;
+			background-color: white;
+			border: 3px solid blue;
+			ul {
+				list-syle-type: none;
+				margin: 0;
+				padding: 0;
+			}	
 		}	
 	}
 	.morepictures {
@@ -73,21 +100,18 @@ $main: cornflowerblue;
 		}	
 		.productbuttons {
 		}		
-		.title {
-			font-size: 2em;	
-			color: blue;	
-			float: left;	
-			margin-top: 1em;	
-		}	
-		.price {
-			font-size: 2em;
-			color: blue;
-			float: right;
-			margin-top: 1em;
-		}
 
 	}
-
-
-
 }//end of product wrap class
+		.prodtitle {
+			font-size: 2em;	
+			color: blue;	
+			margin-top: 1em;
+			float: left;	
+		}	
+		.prodprice {
+			font-size: 2em;
+			color: blue;
+			margin-top: 1em;
+			float: right;
+		}
