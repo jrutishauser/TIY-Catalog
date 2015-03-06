@@ -21,10 +21,14 @@
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <link rel='stylesheet' href='css/product.css' />
 </head>
-<body ng-app='elproduct'>
+<body ng-app='tiy-catalog'>
 	<div id='container'>			
 		<section class='product-wrap' ng-controller='ProductController as product'>
-			<section class ='topcontent'>	
+			<section class ='topcontent'>
+				<div class='variationone'>
+				</div><!--variationone-->
+				<div class='variationtwo'>	
+				</div><!--variationtwo-->
 				<div class='morepictures' ng-click='product.morepics()'>M</div>	
 					<div class='imageholder'>	
 							<img ng-src='{{product.pics[product.imgnum]}}' 

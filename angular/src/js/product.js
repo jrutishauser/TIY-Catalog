@@ -1,5 +1,5 @@
 (function () {
-    angular.module('elproduct', [])
+    angular.module('tiy-catalog', [])
         .controller('ProductController', function () {
             this.prodArray = [1, 2, 3, 4, 5, 6];
 			this.moused = function(){
